@@ -224,9 +224,9 @@ public final class FileModel {
             double sumOfValuedAccesses = getListWithValue(tagIdentifier, node.getValue(), documents).stream().
                     mapToDouble(Document::getAccessAmount).sum();
             double sumOfAccesses = documents.stream().mapToDouble(Document::getAccessAmount).sum();
-            return -sumOfValuedAccesses / sumOfAccesses;
+            return sumOfValuedAccesses / sumOfAccesses;
         }
-        ).thenComparing(Node::getValue).thenComparing(Node::getFilePath)).toList();
+        ).reversed().thenComparing(Node::getValue).thenComparing(Node::getFilePath)).toList();
         return currentNodes;
     }
 
