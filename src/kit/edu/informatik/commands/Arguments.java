@@ -12,7 +12,7 @@ import kit.edu.informatik.exceptions.InvalidArgumentException;
 public final class Arguments {
     private static final String ARGUMENT_MISMATCH1 = "Expected another argument.";
     private static final String ARGUEMENT_MISMATCH2 = "Expected no more arguments but got \"%s\".";
-    private static final String INVALID_TYPES = "Expected an %s but got %s.";
+    private static final String INVALID_TYPES = "Expected an %s but got \"%s\".";
     private static final String EXPECTED_TYPE = "Integer";
     private final String[] arguments;
     private int index = 0;
@@ -26,7 +26,7 @@ public final class Arguments {
     }
 
     /**
-     * Returns the next argument as a String..
+     * Returns the next argument as a String.
      * @return the next argument as a String
      * @throws InvalidArgumentException if there are no more arguments
      */
