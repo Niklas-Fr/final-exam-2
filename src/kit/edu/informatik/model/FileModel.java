@@ -248,7 +248,7 @@ public final class FileModel {
         List<Entry<String, Double>> sortedEntries = entries.entrySet().stream().
                 sorted(Comparator.comparingDouble(entry -> -entry.getValue())).toList();
 
-        // If the informatino gain is high enough, add the entry with a pattern to the result list
+        // If the information gain is high enough, add the entry with a pattern to the result list
         sortedEntries.stream().
                 filter(entry -> entry.getValue() > MINIMUM_EXPECTED_INFORMATION_GAIN).
                 forEach(entry -> result.add(KEY_VALUE_PATTERN.formatted(entry.getKey().toLowerCase(),
